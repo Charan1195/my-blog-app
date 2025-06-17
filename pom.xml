@@ -42,6 +42,18 @@
 
     <build>
         <plugins>
+            <!-- ✅ Compiler plugin to ensure Java 17 is used -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <!-- ✅ Spring Boot plugin to package the JAR -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -49,7 +61,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal> <!-- ✅ This ensures an executable JAR -->
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>
