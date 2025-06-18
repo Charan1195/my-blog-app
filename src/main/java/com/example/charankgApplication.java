@@ -4,9 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CharanKgApplication {
-
+public class CharankgApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CharanKgApplication.class, args);
+        SpringApplication.run(CharankgApplication.class, args);
     }
 }
